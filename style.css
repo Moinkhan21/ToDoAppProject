@@ -1,0 +1,126 @@
+/* Global styles for all elements */
+* {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    font-family: 'Poppins', sans-serif; /* Sets the font to Poppins, with sans-serif as fallback */
+    box-sizing: border-box; /* Ensures padding and border are included in the element’s total width and height */
+}
+
+/* Container styles */
+.container {
+    width: 100%; /* Full width */
+    min-height: 100vh; /* Minimum height of 100% of the viewport height */
+    background: linear-gradient(111.3deg, rgb(74, 105, 187) 9.6%, rgb(205, 77, 204) 93.6%); /* Diagonal gradient background */
+    padding: 10px; /* Padding around the container */
+}
+
+/* Styles for the To-Do app section */
+.todo-app {
+    width: 100%; /* Full width */
+    max-width: 540px; /* Maximum width of 540px */
+    background-color: #fff; /* White background */
+    margin: 100px auto 20px; /* Centered horizontally with top margin of 100px and bottom margin of 20px */
+    padding: 40px 30px 70px; /* Padding inside the app */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Styles for the heading in the To-Do app */
+.todo-app h2 {
+    color: #002765; /* Dark blue color for text */
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Aligns items vertically */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+/* Styles for the icon in the heading */
+.todo-app h2 img {
+    width: 30px; /* Width of the icon */
+    margin-left: 10px; /* Left margin */
+}
+
+/* Styles for the row containing the input and button */
+.row {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Aligns items vertically */
+    justify-content: space-between; /* Spreads items apart */
+    background-color: #edeef0; /* Light grey background */
+    border-radius: 30px; /* Rounded corners */
+    padding-left: 20px; /* Padding on the left */
+    margin-bottom: 25px; /* Bottom margin */
+}
+
+/* Styles for the input box */
+input {
+    flex: 1; /* Takes up available space */
+    border: none; /* Removes border */
+    outline: none; /* Removes outline */
+    background-color: transparent; /* Transparent background */
+    padding: 10px; /* Padding inside the input box */
+    font-size: 14px; /* Font size */
+}
+
+/* Styles for the button */
+button {
+    border: none; /* Removes border */
+    outline: none; /* Removes outline */
+    padding: 16px 50px; /* Padding inside the button */
+    background-color: #ff5945; /* Red background color */
+    color: #fff; /* White text color */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 40px; /* Rounded corners */
+}
+
+/* Styles for list items */
+ul li {
+    list-style: none; /* Removes default list style */
+    font-size: 17px; /* Font size */
+    padding: 15.5px 8px 12px 50px; /* Padding inside list items */
+    user-select: none; /* Prevents text selection */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* Positions relative to its normal position */
+}
+
+/* Styles for the checkbox indicator before list items */
+ul li::before {
+    content: ''; /* No content */
+    position: absolute; /* Absolute positioning */
+    height: 28px; /* Height of the checkbox */
+    width: 28px; /* Width of the checkbox */
+    border-radius: 50%; /* Circular shape */
+    background-image: url(images/unchecked.png); /* Background image for unchecked state */
+    background-size: cover; /* Covers the entire element */
+    background-position: center; /* Centers the background image */
+    top: 12px; /* Top offset */
+    left: 8px; /* Left offset */
+}
+
+/* Styles for checked list items */
+ul li.checked {
+    color: #555; /* Dark grey text color */
+    text-decoration: line-through; /* Strikethrough text decoration */
+}
+
+/* Styles for the checkbox indicator when list item is checked */
+ul li.checked::before {
+    background-image: url(images/checked.png); /* Background image for checked state */
+}
+
+/* Styles for the span inside list items */
+ul li span {
+    position: absolute; /* Absolute positioning */
+    right: 0; /* Right offset */
+    top: 5px; /* Top offset */
+    width: 40px; /* Width of the span */
+    height: 40px; /* Height of the span */
+    font-size: 22px; /* Font size */
+    color: #555; /* Dark grey color */
+    line-height: 40px; /* Line height to center the text */
+    text-align: center; /* Center the text horizontally */
+    border-radius: 50%; /* Circular shape */
+}
+
+/* Hover effect for the span inside list items */
+ul li span:hover {
+    background-color: #edeef0; /* Light grey background on hover */
+}
